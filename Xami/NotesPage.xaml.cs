@@ -1,5 +1,4 @@
-﻿		
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,19 +6,13 @@ using Xamarin.Forms;
 using Notes.Models;
 using Xami;
 
-namespace Xami
+namespace Notes
 {
-	public partial class DodajOdstrzal : ContentPage
+	public partial class NotesPage : ContentPage
 	{
-		public DodajOdstrzal()
+		public NotesPage()
 		{
 			InitializeComponent();
-		}
-
-		void Powrot(object sender, System.EventArgs e)
-		{
-
-			App.Current.MainPage = new MainPage();
 		}
 
 		protected override void OnAppearing()
