@@ -4,9 +4,10 @@
              x:Class="Notes.NotesPage"
              Title="Dziennik Odstrzałów">
 	<StackLayout>
-	
-<Label Text="Ostatnie Odstrzały" />
-	<ListView x:Name="listView"
+
+		<Label Text="Ostatnie Odstrzały" HorizontalTextAlignment="Center" />
+		<Label x:Name="editor1" HorizontalTextAlignment="Center" FontSize="Medium"/>
+		<ListView x:Name="listView"
               Margin="20"
               ItemSelected="OnListViewItemSelected">
 		<ListView.ItemTemplate>
@@ -17,7 +18,7 @@
 		</ListView.ItemTemplate>
 	</ListView>
 		<Button Text="Dodaj Odstrzał"  Clicked="AddShot" />
-		<Button Text="Dostosuj Profil"  Clicked="AddPerson" />
+		<Button Text="Dostosuj profil aktualnego użytkownika"  Clicked="AddPerson" />
 	</StackLayout>
 </ContentPage>
 	

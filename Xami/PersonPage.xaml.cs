@@ -1,30 +1,37 @@
-﻿using Notes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System;
+using System.IO;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using Xami.Models;
 
 namespace Xami
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class PersonPage : ContentPage
 	{
+		string nameField = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "notes.txt");
+		string SubNameField = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "notes2.txt");
+		string PlaceField = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "notes3.txt");
+		string TeamField = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "notes4.txt");
+
+
 		public PersonPage()
 		{
 			InitializeComponent();
+
+			
+				
+					editor1.Text = File.ReadAllText(nameField);
+				editor2.Text = File.ReadAllText(SubNameField);
+				editor3.Text = File.ReadAllText(PlaceField);
+			editor4.Text = File.ReadAllText(TeamField);
+
+
 		}
 
-		private async void SavePerson(object sender, EventArgs e)
+		void OnSaveButtonClicked(object sender, EventArgs e)
 		{
-		
-		messageLabel.Text = "saa";
-		await Navigation.PushAsync(new NotesPage());
-			
+			File.WriteAllText(nameField, editor1.Text);
+			File.WriteAllText(SubNameField, editor2.Text);
+			File.WriteAllText(PlaceField, editor3.Text);
+			File.WriteAllText(TeamField, editor4.Text);
 		}
 
 		

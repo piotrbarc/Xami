@@ -11,14 +11,24 @@ namespace Notes
 {
 	public partial class NotesPage : ContentPage
 	{
+		string nameField = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "notes.txt");
 		public NotesPage()
 		{
 			InitializeComponent();
+			if (File.Exists(nameField))
+			{
+				editor1.Text = "Witaj "+ File.ReadAllText(nameField);
+			}
+
 		}
 
 		protected override async void OnAppearing()
 		{
 			base.OnAppearing();
+			if (File.Exists(nameField))
+			{
+				editor1.Text = "Witaj " + File.ReadAllText(nameField);
+			}
 
 			listView.ItemsSource = await App.Database.GetNotesAsync();
 		}

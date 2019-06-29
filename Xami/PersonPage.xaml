@@ -1,23 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
              x:Class="Xami.PersonPage">
-    <ContentPage.Content>
-        <StackLayout>
-			<Label Text="Imię" />
-			<Entry x:Name="usernameEntry" Placeholder="Imię" />
-			<Label Text="Nazwisko" />
-			<Entry x:Name="Nazwisko" Placeholder="Nazwisko" />
-			<Label Text="Miejscowość" />
-			<Entry x:Name="Miejscowość" Placeholder="Miejscowość" />
-			<Label Text="Nazwa Koła Łowieckiego" />
-			<Entry x:Name="NazwaKołaŁowieckiego" Placeholder="Koło łowieckie" />
-<Button Text="Zapisz" Clicked="SavePerson" />
-			<Label x:Name="messageLabel" />
-			<Label Grid.Row="3" Text="lalalla" x:Name="MyLabel" Margin="5"/>
-		</StackLayout>
-    </ContentPage.Content>
+	<StackLayout Margin="10,35,10,10">
+		<Label Text="Imię" />
+		<Entry x:Name="editor1" Placeholder="Imię" />
+		<Label Text="Nazwisko" />
+		<Entry x:Name="editor2" Placeholder="Nazwisko" />
+		<Label Text="Miejscowość" />
+		<Entry x:Name="editor3" Placeholder="Miejscowość" />
+		<Label Text="Nazwa Koła Łowieckiego" />
+		<Entry x:Name="editor4" Placeholder="Koło łowieckie" />
+
+		
+		
+		
+			<Button Text="Zapisz"
+                    Clicked="OnSaveButtonClicked" />
+			
+	
+	</StackLayout>
 </ContentPage>
