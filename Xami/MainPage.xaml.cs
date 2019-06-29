@@ -22,7 +22,7 @@ namespace Xami
 		void DodajOdstrzal(object sender, System.EventArgs e)
 		{
 			count++;
-			App.Current.MainPage = new DodajOdstrzal();
+			
 		}
 
 
