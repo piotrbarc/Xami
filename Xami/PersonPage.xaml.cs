@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Notes;
+using System;
 using System.IO;
 using Xamarin.Forms;
 
@@ -26,12 +27,13 @@ namespace Xami
 
 		}
 
-		void OnSaveButtonClicked(object sender, EventArgs e)
+		async void OnSaveButtonClicked(object sender, EventArgs e)
 		{
 			File.WriteAllText(nameField, editor1.Text);
 			File.WriteAllText(SubNameField, editor2.Text);
 			File.WriteAllText(PlaceField, editor3.Text);
 			File.WriteAllText(TeamField, editor4.Text);
+			await Navigation.PushAsync(new NotesPage());
 		}
 
 		
