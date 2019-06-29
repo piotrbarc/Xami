@@ -21,7 +21,7 @@ namespace Xami
 					editor1.Text = File.ReadAllText(nameField);
 				editor2.Text = File.ReadAllText(SubNameField);
 				editor3.Text = File.ReadAllText(PlaceField);
-		//	editor4.Text = File.ReadAllText(TeamField);
+			editor4.Text = File.ReadAllText(TeamField);
 
 
 		}
