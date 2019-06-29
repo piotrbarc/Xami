@@ -23,14 +23,17 @@ namespace Notes
 			listView.ItemsSource = await App.Database.GetNotesAsync();
 		}
 
-		async void OnNoteAddedClicked(object sender, EventArgs e)
+		async void AddShot(object sender, EventArgs e)
 		{
 			await Navigation.PushAsync(new NoteEntryPage
 			{
 				BindingContext = new Note()
 			});
 		}
-
+		async void AddPerson(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new PersonPage());
+		}
 		async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
 			if (e.SelectedItem != null)

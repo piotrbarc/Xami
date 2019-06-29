@@ -16,7 +16,8 @@
 			</DataTemplate>
 		</ListView.ItemTemplate>
 	</ListView>
-		<Button Text="Dodaj Odstrzał"  Clicked="OnNoteAddedClicked" /> 
+		<Button Text="Dodaj Odstrzał"  Clicked="AddShot" />
+		<Button Text="Dostosuj Profil"  Clicked="AddPerson" />
 	</StackLayout>
 </ContentPage>
 	

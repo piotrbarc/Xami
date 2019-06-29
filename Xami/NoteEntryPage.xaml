@@ -12,10 +12,10 @@
 				<ColumnDefinition Width="*" />
 				<ColumnDefinition Width="*" />
 			</Grid.ColumnDefinitions>
-			<Button Text="Save"
+			<Button Text="Zapisz"
                     Clicked="OnSaveButtonClicked" />
 			<Button Grid.Column="1"
-                    Text="Delete"
+                    Text="Usuń"
                     Clicked="OnDeleteButtonClicked"/>
 		</Grid>
 		<Button Text="Powrót do listy" Clicked="Button_Clicked"/>
