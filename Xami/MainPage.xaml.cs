@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Notes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -19,14 +20,13 @@ namespace Xami
 		}
 
 		int count = 0;
-		void DodajOdstrzal(object sender, System.EventArgs e)
+		private async void DodajOdstrzal(object sender, EventArgs e)
 		{
-			count++;
-			
+			await Navigation.PushAsync(new NoteEntryPage());
 		}
 
 
-	
+
 	}
 
 }
