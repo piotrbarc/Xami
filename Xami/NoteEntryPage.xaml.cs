@@ -19,13 +19,15 @@ namespace Notes
 			
 
 			InitializeComponent();
-			
+			Field.Text += "a";
+
 		}
 		
 		async void OnSaveButtonClicked(object sender, EventArgs e)
 		{
-			
-				string xom ="Wpis dodał" + File.ReadAllText(nameField) + " " + File.ReadAllText(SubNameField) + "z" + File.ReadAllText(PlaceField) + "należący do koła";
+
+			//string xom ="Wpis dodał" + File.ReadAllText(nameField) + " " + File.ReadAllText(SubNameField) + "z" + File.ReadAllText(PlaceField) + "należący do koła";
+			Field.Text = Field.Text+ Environment.NewLine + Environment.NewLine+ "Wpis dodał :" + File.ReadAllText(nameField) + " " + File.ReadAllText(SubNameField) + Environment.NewLine + File.ReadAllText(PlaceField) + "należący do koła" ;
 			var note = (Note)BindingContext;
 			note.Date = DateTime.UtcNow;
 			await App.Database.SaveNoteAsync(note);

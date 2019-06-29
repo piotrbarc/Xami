@@ -4,7 +4,7 @@
              x:Class="Notes.NoteEntryPage"
              Title="Dodaj Odstrzał">
 	<StackLayout Margin="20">
-		<Editor Placeholder="Enter your note"
+		<Editor Placeholder="Proszę wpisać odstrzał"
 				x:Name="Field"
                 Text="{Binding Text}"
                 HeightRequest="100" />
