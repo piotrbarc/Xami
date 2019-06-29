@@ -11,7 +11,11 @@ namespace Notes
 {
 	public partial class NotesPage : ContentPage
 	{
+
 		string nameField = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "notes.txt");
+		string SubNameField = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "notes2.txt");
+		string PlaceField = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "notes3.txt");
+		string TeamField = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "notes4.txt");
 		public NotesPage()
 		{
 			InitializeComponent();
@@ -30,7 +34,7 @@ namespace Notes
 				editor1.Text = "Witaj " + File.ReadAllText(nameField);
 			}
 
-			listView.ItemsSource = await App.Database.GetNotesAsync();
+			listView.ItemsSource =  await App.Database.GetNotesAsync();
 		}
 
 		async void AddShot(object sender, EventArgs e)

@@ -5,6 +5,7 @@
              Title="Dodaj Odstrzał">
 	<StackLayout Margin="20">
 		<Editor Placeholder="Enter your note"
+				x:Name="Field"
                 Text="{Binding Text}"
                 HeightRequest="100" />
 		<Grid>

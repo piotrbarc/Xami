@@ -36,7 +36,7 @@ namespace Xami.Data
 			}
 			else
 			{
-				return _database.InsertAsync(note);
+				return _database.InsertAsync(note );
 			}
 		}
 
