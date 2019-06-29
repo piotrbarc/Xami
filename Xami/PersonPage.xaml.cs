@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xami.Models;
 
 namespace Xami
 {
@@ -20,7 +21,12 @@ namespace Xami
 
 		private async void SavePerson(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new NotesPage());
+		
+		messageLabel.Text = "saa";
+		await Navigation.PushAsync(new NotesPage());
+			
 		}
+
+		
 	}
 }

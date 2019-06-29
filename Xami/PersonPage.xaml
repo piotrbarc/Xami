@@ -15,9 +15,9 @@
 			<Entry x:Name="Miejscowość" Placeholder="Miejscowość" />
 			<Label Text="Nazwa Koła Łowieckiego" />
 			<Entry x:Name="NazwaKołaŁowieckiego" Placeholder="Koło łowieckie" />
-			
 <Button Text="Zapisz" Clicked="SavePerson" />
 			<Label x:Name="messageLabel" />
+			<Label Grid.Row="3" Text="lalalla" x:Name="MyLabel" Margin="5"/>
 		</StackLayout>
     </ContentPage.Content>
 </ContentPage>
