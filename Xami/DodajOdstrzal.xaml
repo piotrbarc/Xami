@@ -25,7 +25,8 @@
                     Clicked="OnDeleteButtonClicked"/>
 			</Grid>
 
-			<Button Text="Wróć" Clicked="Powrot" />
+		<Button Text="Wróć" Clicked="Powrot" />
+		<Button Text="Wróć" Clicked="Powrot" />
 		</StackLayout>
    
 </ContentPage>
